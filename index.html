@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Set the page title -->
-    <title>Assignment 03</title>
+    <title>Assignment 03 - Ray</title>
 
     <!-- Set the charset we're using to UTF-8 -->
     <meta charset="UTF-8" />
@@ -17,8 +17,30 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- Set the Favicon  -->
-    <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+    <link rel="icon" href="https://www.svgrepo.com/show/414751/blossom-cherry-floral.svg" type="image/svg+xml" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+
+    <!-- Font Awesome cdn css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+
   </head>
+
+  <!--Hi Professor! Here's the links to the resources I used:
+  https://www.w3schools.com/howto/howto_js_todolist.asp
+  https://www.youtube.com/watch?v=-pRg_daFjfk
+  https://www.youtube.com/watch?v=q0-N_w0Op84
+
+  In all honesty, I ran out of time. I wanted to add a background 
+  animation (found an interesting animation library online called 
+  anime.js), and there are still issues with the list filter.
+  -->
+
   <body>
     <!--
 
@@ -35,9 +57,37 @@
       - Have you conducted a code review and left a GitHub Issue on your team member's repo?
 
     -->
+    
     <main>
-      <div id="app"></div>
+      <div class="main-div"> 
+        
+        <header>
+          <h1>To Do List: </h1>
+        </header>
+
+        <form id="input-field" action="">
+          <input type="text" class="todo-input">
+          <button class="todo-button" type="submit">
+            <i class="fas fa-plus-circle fa-lg"></i>
+          </button>
+          <div class="select">
+            <select name="todo" class="todo-filter">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="incomplete">Incomplete</option>
+              </select>
+            </div>
+        </form>
+      </div>
+    
     </main>
+
+    <hr>
+    <br>
+
+      <div class="todo-container">
+        <ul class="todo-list"></ul>
+      </div>
 
     <!-- This is where we add our awesome JavaScript code -->
     <script src="./main.js"></script>
